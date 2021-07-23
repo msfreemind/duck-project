@@ -1,17 +1,27 @@
-import DuckForm from './duck_form';
+import LandingPage from './landing';
+import { Provider } from 'react-redux';
+import ResultsContainer from './results_container';
+import { Route, Switch, Link, HashRouter } from 'react-router-dom';
 
-function Root() {
+function Root({ store }) {
   return (
-    <div>
-      <h1>The Duckfeeding Project</h1>
+    <Provider store={ store }>
+      <HashRouter>
+        <div className="page-content">
+          <header>
+            <Link to="/"><h1>The Duckfeeding Project</h1></Link>
+            <strong><Link to="/results">Results</Link></strong> 
+          </header> 
 
-      <h2>Calling on duckfeeders around the world!</h2>
-
-      <p>I've spent my entire career researching ducks. I've made a great deal of progress, <b>but now I need your help. </b>
-      Whenever you feed ducks, or see other people feeding ducks, please come here and submit the details. The future of duck science may depend on it.</p>
-    
-      <DuckForm />
-    </div>
+          <div>
+            <Switch>
+              <Route exact path="/" component={LandingPage}/>
+              <Route exact path="/results" component={ResultsContainer}/>
+            </Switch>
+          </div>
+        </div>
+      </HashRouter>
+    </Provider>
   );
 }
 

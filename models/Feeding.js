@@ -22,10 +22,10 @@ const FeedingSchema = new Schema({
     type: Number, 
     required: true
   },
-  foodAmount: [{
+  foodAmount: {
     type: Number, 
     required: true
-  }]
+  }
 }, {
   timestamps: true
 });

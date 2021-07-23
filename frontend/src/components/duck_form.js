@@ -29,13 +29,13 @@ class DuckForm extends React.Component {
 
           Food Type (select multiple):
           <select onChange={this.handleInput} id="foodType" value={this.state.foodType} multiple>
-            <option value={"seeds"}>Seeds</option>
-            <option value={"oats"}>Oats</option>
-            <option value={"nuts"}>Nuts</option>
-            <option value={"grapes"}>Grapes</option>
-            <option value={"rice"}>Rice</option>
-            <option value={"junk"}>Junk Food (Bread, Chips, etc.)</option>
-            <option value={"other"}>Other</option>
+            <option value={"Seeds"}>Seeds</option>
+            <option value={"Oats"}>Oats</option>
+            <option value={"Nuts"}>Nuts</option>
+            <option value={"Grapes"}>Grapes</option>
+            <option value={"Rice"}>Rice</option>
+            <option value={"Junk Food"}>Junk Food (Bread, Chips, etc.)</option>
+            <option value={"Other"}>Other</option>
           </select>
           {/* <strong className="error">{this.props.errors.foodType}</strong> */}
 
