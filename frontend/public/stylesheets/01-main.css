@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -12,7 +12,14 @@ h1 {
 
 h2 {
   font-size: 24px;
-  padding-bottom: 20px;
+}
+
+p {
+  margin: 20px 0;
+}
+
+.duck-form h2 {
+  text-align: center;
 }
 
 form {

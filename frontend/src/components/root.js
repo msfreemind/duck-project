@@ -7,8 +7,8 @@ function Root() {
 
       <h2>Calling on duckfeeders around the world!</h2>
 
-      <p>I am a scientist who has spent my entire career researching ducks. I've made a great deal of progress, but now I need the help of all you people out there.</p>
-      <p>Whenever you happen to feed ducks, or see other people feeding ducks, please come to this site and input the details of the event. The future of duck science may depend on it.</p>
+      <p>I've spent my entire career researching ducks. I've made a great deal of progress, <b>but now I need your help. </b>
+      Whenever you feed ducks, or see other people feeding ducks, please come here and submit the details. The future of duck science may depend on it.</p>
     
       <DuckForm />
     </div>
