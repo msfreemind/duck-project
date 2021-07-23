@@ -19,11 +19,13 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   const { errors, isValid } = validateFeedingInput(req.body);
 
+  console.log(errors, req.body);
+
   if (!isValid) return res.status(400).json(errors);
 
   const newFeeding = new Feeding({
     time: req.body.time,
-    foodType: req.body.foodType,
+    foodType: req.body['foodType[]'],
     city: req.body.city,
     neighbourhood: req.body.neighbourhood,
     numDucks: req.body.numDucks,

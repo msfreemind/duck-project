@@ -17,10 +17,6 @@ module.exports = function validateFeedingInput(data) {
     errors.time = 'A feeding time is required';
   }
 
-  if (!Validator.isDate(data.time)) {
-    errors.time = 'A valid date is required for feeding time';
-  }
-
   if (Validator.isEmpty(data.city)) {
     errors.city = 'A city is required';
   }
@@ -37,7 +33,7 @@ module.exports = function validateFeedingInput(data) {
     errors.neighbourhood = 'Neighbourhood must be less than 140 characters';
   }
 
-  if (!Validator.isNumeric(data.numDucks)) {
+  if (!Validator.isNumeric(String(data.numDucks))) {
     errors.numDucks = 'Number of ducks must be numeric';
   }
 

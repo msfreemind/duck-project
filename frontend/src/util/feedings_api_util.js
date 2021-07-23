@@ -14,12 +14,10 @@ export const getFeeding = feedingId => (
   })
 );
 
-export const postFeeding = formData => (
+export const postFeeding = feeding => (
   $.ajax({
     method: 'POST',
     url: '/api/feedings',
-    data: formData,
-    contentType: false,
-    processData: false
+    data: feeding
   })
 );

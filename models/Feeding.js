@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const FeedingSchema = new Schema({
   time: {
-    type: Date,
+    type: String,
     required: true
   },
   foodType: [{ 

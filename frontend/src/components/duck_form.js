@@ -10,11 +10,20 @@ class DuckForm extends React.Component {
   }
 
   handleInput(event) {
-    this.setState({ [event.target.id]: event.target.value });
+    let value = "";
+
+    if (event.target.id === 'foodType') value = Array.from(event.target.selectedOptions, option => option.value);
+    else value = event.target.value;
+
+    this.setState({ [event.target.id]: value });
   }
 
   handleSubmit(event) {
     event.preventDefault();
+
+    this.props.createFeeding(this.state).then(
+      () => window.location.reload()
+    );
   }
 
   render() {
