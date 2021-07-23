@@ -7,7 +7,9 @@ const ResultsItem = ({ feeding, idx }) => {
 
       <br/>
 
-      Food: {feeding.foodType.map((food, idx) => food + " ")}
+      Food: {feeding.foodType.map((food, idx) => {
+        return idx < feeding.foodType.length - 1 ? food + ", " : food;
+      })}
 
       <br/>
 
