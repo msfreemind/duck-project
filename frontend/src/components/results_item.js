@@ -7,7 +7,7 @@ const ResultsItem = ({ feeding, idx }) => {
 
       <br/>
 
-      Food: {feeding.foodType.map((food, idx) => food)}
+      Food: {feeding.foodType.map((food, idx) => food + " ")}
 
       <br/>
 
@@ -19,7 +19,7 @@ const ResultsItem = ({ feeding, idx }) => {
 
       <br />
 
-      Time of Day: {new Date(feeding.time).toLocaleTimeString()}
+      Time of Day: {feeding.time}
     </li>
   );
 }

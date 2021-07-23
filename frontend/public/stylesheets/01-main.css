@@ -84,3 +84,12 @@ button:hover {
 .results {
   padding: 20px 0;
 }
+
+.results-item {
+  margin-bottom: 15px;
+}
+
+.results-item strong {
+  text-decoration: none;
+  cursor: auto;
+}

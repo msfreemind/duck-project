@@ -4,9 +4,6 @@ import rootReducer from "../reducers/root_reducer";
 
 const middlewares = [thunk];
 
-const { logger } = require("redux-logger");
-middlewares.push(logger);
-
 const configureStore = (preloadedState = {}) =>
   createStore(rootReducer, preloadedState, applyMiddleware(...middlewares));
 
