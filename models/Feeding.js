@@ -3,23 +3,29 @@ const Schema = mongoose.Schema;
 
 const FeedingSchema = new Schema({
   time: {
-    type: Date
+    type: Date,
+    required: true
   },
   foodType: [{ 
-    type: String
+    type: String, 
+    required: true
   }],    
   city: {
-    type: String
+    type: String,
+    required: true
   },
   neighbourhood: {
-    type: String
+    type: String,
+    required: true
   },
   numDucks: { 
-    type: Number
+    type: Number, 
+    required: true
   },
-  foodAmount: {
-    type: Number
-  }
+  foodAmount: [{
+    type: Number, 
+    required: true
+  }]
 }, {
   timestamps: true
 });

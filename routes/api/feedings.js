@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Feeding = require('../../models/Feeding');
+const validateFeedingInput = require('../../validation/feedings');
 
 router.get('/', (req, res) => {
   Feeding.find({})
@@ -16,11 +17,15 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  const { errors, isValid } = validateFeedingInput(req.body);
+
+  if (!isValid) return res.status(400).json(errors);
+
   const newFeeding = new Feeding({
     time: req.body.time,
     foodType: req.body.foodType,
     city: req.body.city,
-    neighbourhood: req.user.neighbourhood,
+    neighbourhood: req.body.neighbourhood,
     numDucks: req.body.numDucks,
     foodAmount: req.body.foodAmount
   });
